@@ -343,9 +343,9 @@ function CTA() {
               <a href="mailto:hello@novaseedbio.com" className="rounded-full bg-amber-gradient text-amber-foreground px-6 py-3 font-medium text-center shadow-glow hover:translate-y-[-1px] transition">
                 hello@novaseedbio.com
               </a>
-              <Link to="/" className="rounded-full border border-white/20 px-6 py-3 font-medium text-center hover:bg-white/5 transition">
-                Download one-pager
-              </Link>
+              <a href="mailto:hello@novaseedbio.com" className="rounded-full border border-white/20 px-6 py-3 font-medium text-center hover:bg-white/5 transition">
+                Contact us →
+              </a>
             </div>
           </div>
         </div>
