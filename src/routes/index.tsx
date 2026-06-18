@@ -366,7 +366,7 @@ function Footer() {
           </div>
         </div>
         <div className="text-xs text-muted-foreground">
-          © {new Date().getFullYear()} NovaSeed Bio. Commercializing UNT-licensed seed-oil technology.
+          © {new Date().getFullYear()} NovaSeed Bio. All rights reserved.
         </div>
       </div>
     </footer>
