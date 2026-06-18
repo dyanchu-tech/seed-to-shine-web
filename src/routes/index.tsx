@@ -292,10 +292,10 @@ function Why() {
   const items = [
     ["Differentiated oil chemistry", "Plant-engineered molecules unavailable in conventional feedstocks."],
     ["Enhanced functional performance", "Designed to match — or beat — petroleum benchmarks."],
-    ["Founder-inventors", "The scientists behind the IP are the ones building the company."],
+    ["Biodegradable by design", "Lower disposal burden and end-of-life impact."],
     ["Deep technical expertise", "Oilseed biochemistry, crop breeding, and materials science under one roof."],
-    ["University-licensed IP", "Exclusive commercialization pathway from the University of North Texas."],
     ["Scalable agricultural platform", "A feedstock model that grows with demand."],
+    ["Sustainable supply chain", "Renewable, domestically grown, and resilient."],
   ];
   return (
     <section className="py-24 lg:py-32">
