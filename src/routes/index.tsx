@@ -26,8 +26,6 @@ function Index() {
       <Performance />
       <Applications />
       <Why />
-      <Technology />
-      <Team />
       <CTA />
       <Footer />
     </div>
