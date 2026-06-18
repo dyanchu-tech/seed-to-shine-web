@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import heroOil from "@/assets/hero-oil.jpg";
 import seedsImg from "@/assets/seeds.jpg";
 import gearsImg from "@/assets/gears.jpg";
@@ -26,8 +26,6 @@ function Index() {
       <Performance />
       <Applications />
       <Why />
-      <Technology />
-      <Team />
       <CTA />
       <Footer />
     </div>
@@ -46,8 +44,7 @@ function Nav() {
           <a href="#problem" className="hover:text-foreground transition">Problem</a>
           <a href="#solution" className="hover:text-foreground transition">Solution</a>
           <a href="#applications" className="hover:text-foreground transition">Applications</a>
-          <a href="#technology" className="hover:text-foreground transition">Technology</a>
-          <a href="#team" className="hover:text-foreground transition">Team</a>
+          <a href="#contact" className="hover:text-foreground transition">Contact</a>
         </nav>
         <a href="#contact" className="inline-flex items-center rounded-full bg-primary text-primary-foreground px-4 py-2 text-sm font-medium hover:opacity-90 transition">
           Request a sample
@@ -97,7 +94,7 @@ function Hero() {
           <dl className="mt-14 grid grid-cols-3 gap-6 max-w-md">
             {[
               ["100%", "Bio-based"],
-              ["UNT", "Licensed IP"],
+              ["High", "Performance"],
               ["0", "Petroleum"],
             ].map(([k, v]) => (
               <div key={v}>
@@ -295,10 +292,10 @@ function Why() {
   const items = [
     ["Differentiated oil chemistry", "Plant-engineered molecules unavailable in conventional feedstocks."],
     ["Enhanced functional performance", "Designed to match — or beat — petroleum benchmarks."],
-    ["Founder-inventors", "The scientists behind the IP are the ones building the company."],
+    ["Biodegradable by design", "Lower disposal burden and end-of-life impact."],
     ["Deep technical expertise", "Oilseed biochemistry, crop breeding, and materials science under one roof."],
-    ["University-licensed IP", "Exclusive commercialization pathway from the University of North Texas."],
     ["Scalable agricultural platform", "A feedstock model that grows with demand."],
+    ["Sustainable supply chain", "Renewable, domestically grown, and resilient."],
   ];
   return (
     <section className="py-24 lg:py-32">
@@ -325,86 +322,6 @@ function Why() {
   );
 }
 
-function Technology() {
-  return (
-    <section id="technology" className="py-24 lg:py-32 bg-primary text-primary-foreground">
-      <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16">
-        <div>
-          <p className="text-sm uppercase tracking-[0.2em] text-amber">Technology platform</p>
-          <h2 className="mt-3 font-display text-4xl md:text-5xl font-semibold text-balance">
-            IP licensed from UNT. Built by the inventors.
-          </h2>
-          <p className="mt-6 text-lg text-primary-foreground/80">
-            NovaSeed Bio commercializes an exclusive technology platform licensed from
-            the University of North Texas. Our founders are co-inventors of the core
-            seed-oil innovations — combining oilseed biochemistry, crop breeding, and
-            materials science end-to-end.
-          </p>
-          <div className="mt-10 grid grid-cols-3 gap-6 max-w-md">
-            {[["Phase I", "Technical validation"], ["Phase II", "Pilot partnerships"], ["Phase III", "Commercial deployment"]].map(([k,v]) => (
-              <div key={k} className="rounded-xl bg-white/5 border border-white/10 p-4">
-                <div className="text-xs uppercase tracking-wider text-amber">{k}</div>
-                <div className="mt-2 text-sm">{v}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="lg:pl-10">
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
-            <h3 className="font-display text-xl font-semibold">Competitive landscape</h3>
-            <div className="mt-6 divide-y divide-white/10">
-              {[
-                ["NovaSeed Bio", "Plant oils with engineered performance.", true],
-                ["Traditional bio-lubricants", "Limited molecular optimization.", false],
-                ["Petroleum lubricants", "Environmental & regulatory burden.", false],
-              ].map(([n, d, hi]) => (
-                <div key={n as string} className="py-5 flex gap-4 items-start">
-                  <span className={`mt-1 h-2.5 w-2.5 rounded-full shrink-0 ${hi ? "bg-amber" : "bg-white/30"}`} />
-                  <div>
-                    <div className={`font-semibold ${hi ? "text-amber" : "text-primary-foreground"}`}>{n}</div>
-                    <div className="text-sm text-primary-foreground/70 mt-0.5">{d}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Team() {
-  const team = [
-    { n: "Kent Chapman", r: "President & CEO" },
-    { n: "Diana Berman", r: "Chief Scientific Officer" },
-    { n: "John Park", r: "Secretary" },
-    { n: "Edgar Cahoon", r: "Chair, Scientific Advisory Board" },
-  ];
-  return (
-    <section id="team" className="py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="max-w-2xl">
-          <p className="text-sm uppercase tracking-[0.2em] text-leaf">Founding team</p>
-          <h2 className="mt-3 font-display text-4xl md:text-5xl font-semibold text-balance">
-            Inventors. Operators. Plant scientists.
-          </h2>
-        </div>
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {team.map((m) => (
-            <div key={m.n} className="rounded-2xl border border-border bg-card p-6">
-              <div className="h-16 w-16 rounded-full bg-amber-gradient flex items-center justify-center font-display text-xl font-semibold text-primary">
-                {m.n.split(" ").map(s => s[0]).join("")}
-              </div>
-              <div className="mt-5 font-display text-lg font-semibold">{m.n}</div>
-              <div className="text-sm text-muted-foreground">{m.r}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function CTA() {
   return (
@@ -426,9 +343,9 @@ function CTA() {
               <a href="mailto:hello@novaseedbio.com" className="rounded-full bg-amber-gradient text-amber-foreground px-6 py-3 font-medium text-center shadow-glow hover:translate-y-[-1px] transition">
                 hello@novaseedbio.com
               </a>
-              <Link to="/" className="rounded-full border border-white/20 px-6 py-3 font-medium text-center hover:bg-white/5 transition">
-                Download one-pager
-              </Link>
+              <a href="mailto:hello@novaseedbio.com" className="rounded-full border border-white/20 px-6 py-3 font-medium text-center hover:bg-white/5 transition">
+                Contact us →
+              </a>
             </div>
           </div>
         </div>
@@ -449,7 +366,7 @@ function Footer() {
           </div>
         </div>
         <div className="text-xs text-muted-foreground">
-          © {new Date().getFullYear()} NovaSeed Bio. Commercializing UNT-licensed seed-oil technology.
+          © {new Date().getFullYear()} NovaSeed Bio. All rights reserved.
         </div>
       </div>
     </footer>
