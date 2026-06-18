@@ -44,8 +44,7 @@ function Nav() {
           <a href="#problem" className="hover:text-foreground transition">Problem</a>
           <a href="#solution" className="hover:text-foreground transition">Solution</a>
           <a href="#applications" className="hover:text-foreground transition">Applications</a>
-          <a href="#technology" className="hover:text-foreground transition">Technology</a>
-          <a href="#team" className="hover:text-foreground transition">Team</a>
+          <a href="#contact" className="hover:text-foreground transition">Contact</a>
         </nav>
         <a href="#contact" className="inline-flex items-center rounded-full bg-primary text-primary-foreground px-4 py-2 text-sm font-medium hover:opacity-90 transition">
           Request a sample
