@@ -94,7 +94,7 @@ function Hero() {
           <dl className="mt-14 grid grid-cols-3 gap-6 max-w-md">
             {[
               ["100%", "Bio-based"],
-              ["UNT", "Licensed IP"],
+              ["High", "Performance"],
               ["0", "Petroleum"],
             ].map(([k, v]) => (
               <div key={v}>
